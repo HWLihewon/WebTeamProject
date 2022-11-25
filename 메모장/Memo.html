@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>메모장</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        
+        <script src="jscript.js"></script>
+    </head>
+    
+    <body>
+        <header>
+          <div>
+            <h1 style="font-size: 40px; ">메모장-NOTE</h1>
+
+          </div>
+        </header>
+       
+       <label>폰트변경</label>
+        <select id="selectF" name="selectFontFamily" onchange="SFontFamily();">
+            <option> Serif </option>
+            <option> Arial </option>
+            <option> Sans-Serif </option>                                  
+            <option> Tahoma </option>
+            <option> Verdana </option>
+            <option> Lucida Sans Unicode </option> 
+            <option> Segoe UI </option>  
+            <option> Malgun Gothic </option>
+            <option> BatangChe </option>  
+            <option> bum </option>                                    
+          </select>
+        
+          <label for="fonts">폰트크기:</label>
+              <select class="form-control" id="fonts" onchange="Fontsize(this);">
+               <option>5</option>
+               <option>10</option>
+                <option>15</option>
+                 <option>20</option>
+                 <option>25</option>
+                   <option>30</option>
+                    <option>35</option>
+                       <option>40</option>
+                        <option>45</option>
+                          <option>50</option>
+                          <option>55</option>
+                       <option>60</option>
+                      <option>65</option>
+                    <option>70</option>
+                  <option>75</option>
+                </select>
+       
+                  <br>
+                <label>TTS를 이용하고싶으시면 현재작성된텍스트의 언어를 골라주세요</label>
+                  <select id="lang">
+                  <option value="ko-KR">한국어</option>
+                   <option value="ja-JP" selected>일본어</option>
+                   <option value="en-US">영어</option>
+              </select>
+          
+                      <br>
+                      <br>
+                    
+    <div id="box">
+      <form>
+        단어검색:
+        <input type="text" name="textbox" id="textb">
+        <br>
+        <button type="button" id="button2" onclick="TextSearch()">검색</button>
+      </form>
+      <textarea id='texta'  rows="10" cols="50"> </textarea>
+     <br>
+      <button class="buttonstyle" type="button" onclick="download()">Txt파일로 저장</button>
+      <input type="button" class="buttonstyle" value="지우기" onclick="javascript:Clear();">
+      <button class="buttonstyle" id="read">읽기</button>
+     
+    </div> 
+    
+
+ 
+    
+   
+   
+
+    
+      
+    </body>
+</html>
